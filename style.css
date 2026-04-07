@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.navbar{
+    height: 13vh;
+    width: 100%;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar>.box{
+    width: 33.33%;
+    height: 100%;
+}
+
+.main {
+    height: 87vh;
+    background: 
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url('backdrop.jpg');
+    
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#searchbar{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#searchbar>input{
+    width: 90%;
+    height: 48px;
+    border-radius: 20px;
+    border: none;
+    background-color: #202020;
+    text-align: center;
+    color: #B3AFAF;
+    font-size: 21px;
+}
+
+.text-box{
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-box{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 125px;
+}
+
+.logo{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+
+.music-box{
+    height: 500px;
+    width: 450px;
+    background: linear-gradient(
+        135deg,
+        rgba(20, 20, 20, 0.9),
+        rgba(5, 5, 5, 0.6)
+    );
+    backdrop-filter: blur(12px);
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.8);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.cover {
+    width: 250px;
+    height: 250px;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+/* ✅ SCROLLING TITLE */
+.song-title-container {
+    width: 250px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.scroll {
+    display: inline-block;
+    animation: scrollLoop 10s linear infinite;
+    color: white;
+    font-weight: 600;
+    font-size: 22px;
+}
+
+.scroll span {
+    padding-right: 50px;
+}
+
+.scroll:hover {
+    animation-play-state: paused;
+}
+
+@keyframes scrollLoop {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+/* CONTROLS */
+.controls {
+    display: flex;
+    gap: 20px;
+}
+
+.controls button {
+    background: #1db954;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 50%;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.controls button:hover {
+    transform: scale(1.1);
+}
+
+/* ========================= */
+/* 📱 TABLET (768px and below) */
+/* ========================= */
+@media (max-width: 768px) {
+
+    .navbar {
+        flex-direction: column;
+        height: auto;
+        padding: 10px 0;
+        gap: 10px;
+    }
+
+    .navbar > .box {
+        width: 100%;
+        height: auto;
+    }
+
+    .logo-box {
+        justify-content: center;
+        padding-right: 0;
+    }
+
+    #searchbar > input {
+        width: 80%;
+        font-size: 16px;
+        height: 40px;
+    }
+
+    .text-box h1 {
+        font-size: 20px;
+    }
+
+    .music-box {
+        width: 90%;
+        height: auto;
+        padding: 20px;
+    }
+
+    .cover {
+        width: 200px;
+        height: 200px;
+    }
+
+    .song-title-container {
+        width: 200px;
+    }
+
+    .controls button {
+        padding: 10px 14px;
+        font-size: 16px;
+    }
+}
+
+
+@media (max-width: 480px) {
+
+    .text-box h1 {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    #searchbar > input {
+        width: 90%;
+        font-size: 14px;
+    }
+
+    .music-box {
+        width: 95%;
+        padding: 15px;
+        gap: 12px;
+    }
+
+    .cover {
+        width: 160px;
+        height: 160px;
+    }
+
+    .song-title-container {
+        width: 160px;
+    }
+
+    .scroll {
+        font-size: 14px;
+    }
+
+    .controls {
+        gap: 15px;
+    }
+
+    .controls button {
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+
+    .logo {
+        height: 40px;
+        width: 40px;
+    }
+}

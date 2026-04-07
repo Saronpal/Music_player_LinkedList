@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sasta Spotify</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="box">
+                <div id="searchbar">
+                    <input type="text" placeholder="What do you want to play ?">
+                </div>
+            </div>
+            <div class="box text-box">
+                <h1>Welcome to Sasta Spotify</h1>
+            </div>
+            <div class="box logo-box">
+                <img src="logo.png" alt="logo" class="logo">
+            </div>
+        </div>
+    </header>
+
+    <section class="main">
+        <div class="music-box">
+            <img id="cover" src="cover1.jpg" alt="cover" class="cover">
+            <div class="song-title-container">
+                <div class="scroll" id="song-title">
+                    <span>Loading...</span>
+                    <span>Loading...</span>
+                </div>
+            </div>
+
+            <audio id="audio"></audio>
+
+            <div class="controls">
+                <button onclick="prevSong()">⏮</button>
+                <button onclick="playPause()">▶</button>
+                <button onclick="nextSong()">⏭</button>
+            </div>
+        </div>
+    </section>
+
+<script src="script.js"></script>
+</body>
+</html>
