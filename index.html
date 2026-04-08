@@ -34,10 +34,18 @@
             </div>
 
             <audio id="audio"></audio>
+            <div class="progress-container" onclick="seek(event)">
+                    <div class="progress"></div>
+            </div>
+
+            <div class="time">
+                <span id="current-time">0:00</span>
+                <span id="duration">0:00</span>
+            </div>
 
             <div class="controls">
                 <button onclick="prevSong()">⏮</button>
-                <button onclick="playPause()">▶</button>
+                <button onclick="playPause()" id="play-btn">▶</button>
                 <button onclick="nextSong()">⏭</button>
             </div>
         </div>
