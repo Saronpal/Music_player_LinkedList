@@ -97,7 +97,6 @@
     object-fit: cover;
 }
 
-/* ✅ SCROLLING TITLE */
 .song-title-container {
     width: 250px;
     overflow: hidden;
