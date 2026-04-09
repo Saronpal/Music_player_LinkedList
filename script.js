@@ -32,7 +32,7 @@ class Playlist {
         if (this.current.next) {
             this.current = this.current.next;
         } else {
-            // 🔥 loop back to first song
+            //  loop back to first song
             this.current = this.head;
         }
     }
@@ -46,7 +46,7 @@ class Playlist {
 
 const playlist = new Playlist();
 
-// 🎵 SONGS
+// SONGS
 playlist.add({
     title: "Itni si baat hain | Azhaar",
     src: "Songs/song1.mp3",
@@ -83,16 +83,16 @@ playlist.add({
     cover: "song_cover/cover6.jpg"
 });
 
-// 🎧 ELEMENTS
+//  ELEMENTS
 const audio = document.getElementById("audio");
 const cover = document.getElementById("cover");
 const title = document.getElementById("song-title");
 const playBtn = document.getElementById("play-btn");
 
-// 🔁 AUTOPLAY NEXT SONG
+//  AUTOPLAY NEXT SONG
 audio.addEventListener("ended", nextSong);
 
-// 🔄 PLAY / PAUSE ICON AUTO SYNC (BEST WAY)
+// PLAY / PAUSE 
 audio.addEventListener("play", () => {
     playBtn.innerText = "⏸";
     cover.classList.add("playing");
@@ -103,7 +103,7 @@ audio.addEventListener("pause", () => {
     cover.classList.remove("playing");
 });
 
-// 🎵 LOAD SONG
+// LOAD SONG
 function loadSong(node) {
     audio.src = node.song.src;
     cover.src = node.song.cover;
@@ -113,13 +113,13 @@ function loadSong(node) {
         <span>${node.song.title}</span>
     `;
 
-    // 🔥 Reset scrolling animation
+    //  Reset scrolling animation
     title.style.animation = "none";
     title.offsetHeight;
     title.style.animation = "";
 }
 
-// ▶️ PLAY / PAUSE
+// PLAY / PAUSE
 function playPause() {
     if (audio.paused) {
         audio.play();
@@ -128,26 +128,24 @@ function playPause() {
     }
 }
 
-// ⏭ NEXT
+// NEXT
 function nextSong() {
     playlist.next();
     loadSong(playlist.current);
     audio.play();
 }
 
-// ⏮ PREVIOUS
+//  PREVIOUS
 function prevSong() {
     playlist.prev();
     loadSong(playlist.current);
     audio.play();
 }
 
-// 🎬 INITIAL LOAD
+// INITIAL LOAD
 loadSong(playlist.current);
 
-// =========================
-// 🎚 PROGRESS BAR
-// =========================
+// 🎚PROGRESS BAR
 
 const progress = document.querySelector(".progress");
 const currentTimeEl = document.getElementById("current-time");
