@@ -78,9 +78,10 @@ playlist.add({
 });
 
 playlist.add({
-    title: "Chahun Main Yaa Na | Aashiqui 2",
+    title: "Halka Halka Suroor Hai | Rahat Fateh Ali Khan",
     src: "Songs/song6.mp3",
-    cover: "song_cover/cover6.jpg"
+    cover: "song_cover/cover6.png"
+    
 });
 
 //  ELEMENTS
